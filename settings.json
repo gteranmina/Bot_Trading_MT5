@@ -1,7 +1,7 @@
 {
-  "username": "90244504",
-  "password": "Ur@1QgZh",
-  "server": "MetaQuotes-Demo",
+  "username": "your_username",
+  "password": "your_password",
+  "server": "your_server",
   "mt5Pathway": "C:/Program Files/MetaTrader 5/terminal64.exe",
   "symbols": ["EURUSD", "USDJPY", "XAUUSD"],
   "timeframe": "M1",
