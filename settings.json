@@ -1,0 +1,9 @@
+{
+  "username": "90244504",
+  "password": "Ur@1QgZh",
+  "server": "MetaQuotes-Demo",
+  "mt5Pathway": "C:/Program Files/MetaTrader 5/terminal64.exe",
+  "symbols": ["EURUSD", "USDJPY", "XAUUSD"],
+  "timeframe": "M1",
+  "pip_size": 0.1
+}
