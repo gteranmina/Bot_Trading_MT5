@@ -10,12 +10,14 @@ Este es un bot de trading automatizado para MetaTrader 5 (MT5) que opera en hast
 ✅ Totalmente automatizado y diseñado para trabajar con MT5 Desktop.
 
 # ⚙ Requisitos
-
 🔹 MetaTrader 5 (MT5) Desktop.
 
 🔹 Python 3.8+ (Recomendado Python 3.10).
 
-🔹 PyCharm Community Edition (Recomendado para facilitar la instalación y configuración).
+🔹 PyCharm Community Edition (Recomendado para facilitar la instalación y configuración). 
+
+    Enlace de descarga para windows: 
+    https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
 
 🔹 Cuenta de trading demo o real en MT5.
 
