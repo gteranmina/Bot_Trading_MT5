@@ -25,8 +25,8 @@ Este es un bot de trading automatizado para MetaTrader 5 (MT5) que opera en hast
 
 🔹 1️⃣ Descargar el código
 
-    git clone https://github.com/0-RnE/trading-bot-mt5.git
-    cd trading-bot-mt5
+    git clone https://github.com/0-RnE/Bot_Trading_MT5.git
+    cd Bot_Trading_MT5
 
 🔹 2️⃣ Instalar dependencias
 
