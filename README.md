@@ -1,76 +1,34 @@
 # Bot_Trading_MT5
-Este es un bot de trading automatizado para MetaTrader 5 (MT5) que opera en hasta 3 mercados simultáneamente. Utiliza indicadores técnicos como RSI, EMA, MACD, ATR y Volumen para analizar el mercado y ejecutar órdenes automáticamente.
 
-# 📌 Características
+Este es un bot de trading automatizado para MetaTrader 5 (MT5) que opera en múltiples mercados simultáneamente. La nueva versión utiliza una estrategia basada en el cruce de EMA y el ATR con TP ajustado, complementada con el indicador ADX y validación de volumen para determinar oportunidades de trading con temporalidades de 1H (1 hora).
 
-✅ Opera hasta 3 mercados simultáneamente. 
-✅ Utiliza RSI, EMA, MACD, ATR y volumen para detectar oportunidades.
-✅ Optimizado para ahorrar recursos de CPU y memoria.
-✅ Detiene la ejecución después de 5 operaciones por mercado.
-✅ Totalmente automatizado y diseñado para trabajar con MT5 Desktop.
+---
 
-# ⚙ Requisitos
-🔹 MetaTrader 5 (MT5) Desktop.
+## 📌 Características
 
-🔹 Python 3.8+ (Recomendado Python 3.10).
+- **Multiplicidad de Mercados:** Opera en varios mercados simultáneamente.
+- **Estrategia Técnica:** Basada en el cruce de EMA (9 y 21) y en el cálculo del ATR para definir Stop Loss y Take Profit.
+- **Filtrado de Señales:** Incorpora ADX y validación de volumen para descartar señales débiles.
+- **Ejecución Asíncrona:** Utiliza hilos (threads) para el análisis en tiempo real y la ejecución de órdenes, evitando órdenes duplicadas en un mismo símbolo.
+- **Registro Detallado:** Guarda un historial de operaciones en un archivo CSV (**registro_trading.csv**).
+- **Manejo de Errores:** Incluye comprobaciones robustas para evitar errores al enviar órdenes, por ejemplo, al intentar operar fuera del horario de mercado.
 
-🔹 PyCharm Community Edition (Recomendado para facilitar la instalación y configuración). 
+---
 
-    Enlace de descarga para windows: 
-    https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+## ⚙ Requisitos
 
-🔹 Cuenta de trading demo o real en MT5.
+- **MetaTrader 5 (MT5) Desktop**  
+  Asegúrate de tener MT5 abierto y con el trading automático habilitado.
 
-# 📥 Instalación
+- **Python 3.8+** (se recomienda Python 3.10).
 
-🔹 1️⃣ Descargar el código
+- **Librerías Python:**
+  - MetaTrader5
+  - pandas
+  - numpy
+  - talib
+  - python-dotenv  
+  Estas dependencias se pueden instalar utilizando el archivo de requirements.txt.
 
-    git clone https://github.com/0-RnE/Bot_Trading_MT5.git
-    cd Bot_Trading_MT5
-
-🔹 2️⃣ Instalar dependencias
-
-Ejecuta el siguiente comando para instalar las librerías necesarias:
-
-    pip install -r requirements.txt
-
-🔹 3️⃣ Configurar settings.json
-
-Edita el archivo settings.json con tus credenciales de MetaTrader 5:
-
-    {
-      "username": "TU_NUMERO_DE_CUENTA",
-      "password": "TU_CONTRASEÑA",  
-      "server": "TU_SERVIDOR",
-      "mt5Pathway": "C:/Program Files/MetaTrader 5/terminal64.exe",
-      "symbols": ["EURUSD", "USDJPY", "XAUUSD"],
-      "timeframe": "M1",
-      "pip_size": 0.0001
-    }  
-
-🔹 4️⃣ Ejecutar el bot
-
-Para iniciar el bot, ejecuta:
-
-    python3 main.py
-
-# 📜 Uso del Bot
-
-1️⃣ El bot analizará el mercado cada 5 segundos en busca de oportunidades.
-
-2️⃣ Si detecta una señal, ejecutará una orden y esperará 60 segundos antes de operar nuevamente en ese mercado.
-
-3️⃣ Cuando un mercado complete 5 operaciones, dejará de operar ese símbolo.
-
-4️⃣ Cuando todos los mercados hayan completado 5 operaciones, el bot se cerrará automáticamente.
-
-# 🛠 Solución de Problemas
-
-❌ ImportError: No se pudo encontrar el archivo de configuración.
-
-    📌 Solución: Asegúrate de que settings.json está en la misma carpeta que main.py y tiene las credenciales correctas.
-
-❌ Error al inicializar MT5
-
-    📌 Solución: Verifica que MetaTrader 5 esté abierto y que la cuenta tenga trading automático activado en:
-    Herramientas > Opciones > Expert Advisors.
+- **Credenciales de MT5:**  
+  Una cuenta de trading demo o real en MT5. Para cambiar las credenciales de la cuenta de MT5, unicamente hay que modificar el archivo "config.env" y escribir las credenciales referentes a la cuenta a operar por el bot.
