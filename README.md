@@ -1,4 +1,4 @@
-# Bot_Trading_MT5
+# Bot_Trading_MT5 (Aun se encuentra en pruebas)
 
 Este es un bot de trading automatizado para MetaTrader 5 (MT5) que opera en múltiples mercados simultáneamente. La nueva versión utiliza una estrategia basada en el cruce de EMA y el ATR con TP ajustado, complementada con el indicador ADX y validación de volumen para determinar oportunidades de trading con temporalidades de 1H (1 hora).
 
