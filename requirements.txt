@@ -1,6 +1,5 @@
 MetaTrader5
 pandas
 numpy
-ta
 asyncio
 TA-Lib
